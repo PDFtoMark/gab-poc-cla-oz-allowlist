@@ -15,7 +15,7 @@ jobs:
       - name: Read Allowlist File
         id: read_allowlist
         run: |
-          printf 'dependabot[bot]\nrenovate[bot]\n' > allowlist.txt
+          printf 'dependabot[bot]' > allowlist.txt
           ALLOWLIST=$(cat allowlist.txt)
           echo "allowlist=$ALLOWLIST" >> $GITHUB_OUTPUT
       - name: Check if user is in allowlist (verbatim logic from target)
